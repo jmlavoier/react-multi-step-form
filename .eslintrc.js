@@ -18,7 +18,8 @@ module.exports = {
         "import/no-extraneous-dependencies": [
             "error", {
                 "devDependencies": [
-                    "src/**/*.test.js"
+                    "src/**/*.test.js",
+                    "src/**/*.story.js"
                 ]
             }
         ],
