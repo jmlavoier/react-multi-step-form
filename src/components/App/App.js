@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.sass';
 
 const App = () => (<div className="app">Hello world!</div>);
 
