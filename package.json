@@ -15,7 +15,9 @@
     "eject": "react-scripts eject",
     "lint": "esw src/** -w",
     "lint:fix": "eslint src/** --fix",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.16",
@@ -27,6 +29,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.5.1",
-    "eslint-watch": "^3.1.3"
+    "eslint-watch": "^3.1.3",
+    "node-sass-chokidar": "^0.0.3"
   }
 }
