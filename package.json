@@ -21,10 +21,11 @@
     "build": "webpack --config webpack.config.js",
     "lint": "esw src/** -w",
     "lint:fix": "eslint src/** --fix",
-    "server:cov": "http-server ./coverage",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch",
+    "test:cov": "jest --config jestconfig.json --coverage",
+    "server:cov": "http-server ./coverage"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.16",
