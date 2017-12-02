@@ -1,0 +1,7 @@
+public/
+node_modules/*
+**/node_modules/*
+*.config.js
+*.config.production.js
+src/**/*.test.js
+src/utils/**/*.js
