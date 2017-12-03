@@ -23,6 +23,6 @@ storiesOf('Input Toggle', module)
   .add('Invalid', withInfo()(() => (
     <InputToggle name="input" label="Name" onChange={action('changed')} isInvalid />
   )))
-  .add('Checked', () => withInfo()((
+  .add('Checked', withInfo()(() => (
     <InputToggle name="input" label="Name" onChange={action('changed')} isChecked />
   )));

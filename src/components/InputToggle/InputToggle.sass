@@ -6,7 +6,7 @@
   display: inline-block
 
 .input
-  border: 1px solid #aaa
+  border: 1px solid $light-blue
   border-radius: 50%
   width: 25px
   height: 25px
@@ -14,10 +14,13 @@
 
   &:hover
     cursor: pointer
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.1)
+    background: $light-blue
+    border-color: $light-blue
+    box-shadow: inset 0 0 transparent, 0 0 0 3px $light-blue-shadow
+    transition: .2s
 
 .is-checked .input
-  background-color: orange
+  background-color: $light-blue
 
   &:after
     content: ""
@@ -32,9 +35,9 @@
   
 .invalid 
   & > .input
-    border-color: red
+    border-color: $red-warnning
   & > .label
-    color: red
+    color: $red-warnning
 
 .label
   display: inline-block
