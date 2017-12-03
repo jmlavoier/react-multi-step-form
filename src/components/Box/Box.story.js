@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo, setDefaults } from '@storybook/addon-info';
 
 import Box from './Box';
+import Button from 'components/Button';
 
 // addon-info
 setDefaults({
@@ -27,7 +28,7 @@ storiesOf('Box', module)
   }))
   .add('With footer', withInfo()(() => {
     const header = <h3>Title</h3>;
-    const footer = <button>Button</button>;
+    const footer = <Button text="Submit" />;
     return (
       <Box header={header} footer={footer} >Think outside the box!</Box>
     );
