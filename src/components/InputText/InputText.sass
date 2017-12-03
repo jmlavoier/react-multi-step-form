@@ -1,0 +1,33 @@
+@import 'css/variables'
+
+.input-wrapper
+  position: relative
+  font-family: $font-stack
+
+.input
+  border: 1px solid #aaa
+  border-radius: 5px
+  line-height: 28px
+  outline: none
+  padding-left: 14px
+  padding-right: 14px
+  width: calc(100% - 28px)
+  font-size: $font-size-md
+
+  &:focus
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1)
+
+.invalid 
+  & > .input
+    border-color: red
+  & > .label
+    color: red
+
+.label
+  width: 100%
+  display: block
+  text-transform: uppercase
+  font-size: $font-size-sm
+  padding: 2px
+
+
