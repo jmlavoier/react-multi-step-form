@@ -14,7 +14,6 @@ const getClassName = (isChecked, isInvalid) => classNames(style['input-wrapper']
 
 const InputCheckBox = ({ id, name, label, value, isChecked, onClick, isInvalid }) => (
   <div className={getClassName(isChecked, isInvalid)}>
-    {label && <span className={style.label}>{label}</span>}
     <span role="presentation" className={style.input} onClick={onClick} />
     <input
       id={id}
@@ -23,6 +22,7 @@ const InputCheckBox = ({ id, name, label, value, isChecked, onClick, isInvalid }
       value={value}
       checked={isChecked}
     />
+    {label && <span className={style.label}>{label}</span>}
   </div>
 );
 
