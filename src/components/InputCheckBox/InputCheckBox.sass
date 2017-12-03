@@ -1,0 +1,45 @@
+@import 'css/variables'
+
+.input-wrapper
+  position: relative
+  font-family: $font-stack
+  display: inline-block
+
+.input
+  border: 1px solid #aaa
+  border-radius: 5px
+  width: 25px
+  height: 25px
+  display: inline-block
+  font-size: $font-size-md
+
+  &:hover
+    cursor: pointer
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1)
+
+.is-checked .input
+  background-color: orange
+
+  &:after
+    content: ""
+    border-bottom: 4px solid #fff
+    border-left: 4px solid #fff
+    transform: rotateZ(320deg)
+    position: absolute
+    width: 10px
+    height: 5px
+    top: 7px
+    right: 7px
+  
+.invalid 
+  & > .input
+    border-color: red
+  & > .label
+    color: red
+
+.label
+  display: inline-block
+  text-transform: uppercase
+  font-size: $font-size-sm
+  padding: 5px
+  vertical-align: text-bottom
