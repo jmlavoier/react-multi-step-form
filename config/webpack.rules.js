@@ -12,7 +12,10 @@ module.exports = [
         localIdentName: '[local]___[hash:base64:5]',
       }
     }, {
-      loader: "sass-loader"
+      loader: "sass-loader",
+      options: {
+        includePaths: ["src"]
+      }
     }]
   }
 ];
