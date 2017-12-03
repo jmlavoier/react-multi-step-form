@@ -2521,12 +2521,6 @@ dot-prop@^4.1.0:
   dependencies:
     is-obj "^1.0.0"
 
-downgrade@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/downgrade/-/downgrade-1.1.1.tgz#b1e57e6de700a57b59f71b992a219d07fc407166"
-  dependencies:
-    debug "^2.2.0"
-
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"

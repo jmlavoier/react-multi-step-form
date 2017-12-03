@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
-    "downgrade": "^1.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dnd": "^2.5.4",
