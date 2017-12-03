@@ -1,0 +1,18 @@
+.progress-bar
+  background-color: rgba(#0000ff, 0.2)
+  padding: 0
+
+  & > span
+    display: inherit
+    background-color: rgba(#0000ff, 0.2)
+    height: 15px
+    animation-name: grow
+    animation-duration: 3s
+    animation-timing-function: linear
+    width: 100%
+
+@keyframes grow
+  from 
+    width: 0
+  to 
+    width: 100%
