@@ -1,0 +1,32 @@
+@import 'css/variables'
+
+.select-wrapper
+  position: relative
+  font-family: $font-stack
+
+.select
+  border: 1px solid #aaa
+  background-color: #fff
+  border-radius: 5px
+  line-height: 28px
+  outline: none
+  padding: 10px 14px
+  width: calc(100% - 28px)
+  font-size: $font-size-md
+
+  &:hover
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1)
+
+.invalid 
+  & > .select
+    border-color: red
+    color: red
+  & > .label
+    color: red
+
+.label
+  width: 100%
+  display: block
+  text-transform: uppercase
+  font-size: $font-size-sm
+  padding: 2px
