@@ -15,10 +15,18 @@ storiesOf('SelectBox', module)
     <SelectBox name="input" onChange={action('changed')} />
   )))
   .add('With options', withInfo()(() => {
-    const newValue = 'Name';
+    const options = ['C1', 'C2', 'C3'];
 
     return (
-      <SelectBox name="input" onChange={action('changed')} options={['C1', 'C2', 'C3']} />
+      <SelectBox name="input" onChange={action('changed')} options={options} />
+    );
+  }))
+  .add('With option selected', withInfo()(() => {
+    const options = ['C1', 'C2', 'C3'];
+    const value = 'C2';
+
+    return (
+      <SelectBox name="input" onChange={action('changed')} options={options} value={value} />
     );
   }))
   .add('With label', withInfo()(() => (
