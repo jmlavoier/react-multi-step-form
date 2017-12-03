@@ -1,13 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { withInfo, setDefaults } from '@storybook/addon-info';
 
 import ProgressBar from './ProgressBar';
+// addon-info
+setDefaults({
+  source: true,
+});
 
 storiesOf('ProgressBar', module)
-  .add('Default', () => (
+  .add('Default', withInfo({})(() => (
     <ProgressBar />
-  ))
-  .add('Duration .5s', () => (
+  )))
+  .add('Duration .5s', withInfo({})(() => (
     <ProgressBar duration=".5s" />
-  ));
+  )));
