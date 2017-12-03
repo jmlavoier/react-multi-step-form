@@ -1,4 +1,5 @@
 var path = require('path');
+var webpackRules = require('./config/webpack.rules');
 
 const PATHS = {
   root: path.resolve(__dirname, 'public'),
@@ -24,21 +25,6 @@ module.exports = {
     port: 8888
   },
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-    {
-      test: /\.sass$/,
-      use: [{
-        loader: "style-loader"
-      }, {
-        loader: "css-loader",
-        options: {
-          modules: true,
-          sourceMap: true,
-          localIdentName: '[local]___[hash:base64:5]',
-        }
-      }, {
-        loader: "sass-loader"
-      }]
-    }]
+    rules: webpackRules
   }
 };

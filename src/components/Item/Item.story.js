@@ -2,14 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo, setDefaults } from '@storybook/addon-info';
 
-import App from './App';
+import Item from './Item';
 
 // addon-info
 setDefaults({
   source: true,
 });
 
-storiesOf('App', module)
+storiesOf('Item', module)
   .add('default', withInfo()(() => (
-    <App />
+    <Item />
   )));
