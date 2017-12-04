@@ -4,13 +4,18 @@ import createSagaMiddleware from 'redux-saga';
 
 import firstStepForm from 'containers/FirstStepForm/reducer';
 import secondStepForm from 'containers/SecondStepForm/reducer';
-import firstStepSaga from 'containers/FirstStepForm/sagas';
+import thirdStepForm from 'containers/ThirdStepForm/reducer';
+import fourthStepForm from 'containers/FourthStepForm/reducer';
+
+import rootSaga from 'sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducers = combineReducers({
   firstStepForm,
   secondStepForm,
+  thirdStepForm,
+  fourthStepForm,
 });
 
 const store = createStore(
@@ -18,6 +23,6 @@ const store = createStore(
   applyMiddleware(sagaMiddleware),
 );
 
-sagaMiddleware.run(firstStepSaga);
+sagaMiddleware.run(rootSaga);
 
 export default store;

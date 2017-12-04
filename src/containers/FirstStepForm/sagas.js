@@ -16,8 +16,8 @@ function* fetchCheckBox() {
   yield put({ type: FIRST_STEP_NEXT_STEP });
 }
 
-function* firstStepSaga() {
-  yield takeLatest(FIRST_STEP_CHANGE_CHECKBOX, fetchCheckBox);
-}
+const firstStepSaga = [
+  takeLatest(FIRST_STEP_CHANGE_CHECKBOX, fetchCheckBox),
+];
 
 export default firstStepSaga;
