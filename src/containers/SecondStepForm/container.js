@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { changeCheckBox } from './actions';
+import { changeRadio } from './actions';
 import SecondStepForm from './SecondStepForm';
 
 /* istanbul ignore next */
@@ -9,7 +9,7 @@ const mapStateToProps = ({ secondStepForm }) => ({
 
 /* istanbul ignore next */
 const mapDispatchToProps = dispatch => ({
-  onClickCheckBox: name => dispatch(changeCheckBox(name)),
+  onClickRadio: name => dispatch(changeRadio(name)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SecondStepForm);
