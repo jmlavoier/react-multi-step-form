@@ -15,7 +15,8 @@ const FORMS = [
 ];
 
 const ComposeAllForms = ({ step }) => {
-  const CurrentForm = FORMS[step];
+  const index = step - 1;
+  const CurrentForm = FORMS[index];
 
   return (
     <Item width="600px">
