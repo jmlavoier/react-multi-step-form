@@ -8,7 +8,7 @@ import {
   FOURTH_STEP_NEXT_STEP,
 } from './constants';
 
-function* fetchCheckBox() {
+function* fetchSelectBox() {
   yield put({ type: FOURTH_STEP_HIDE_PROGRESSBAR });
   yield delay(1);
   yield put({ type: FOURTH_STEP_SHOW_PROGRESSBAR });
@@ -16,8 +16,8 @@ function* fetchCheckBox() {
   yield put({ type: FOURTH_STEP_NEXT_STEP });
 }
 
-function* firstStepSaga() {
-  yield takeLatest(FOURTH_STEP_CHANGE_SELECT, fetchCheckBox);
-}
+const firstStepSaga = [
+  takeLatest(FOURTH_STEP_CHANGE_SELECT, fetchSelectBox),
+];
 
 export default firstStepSaga;

@@ -8,7 +8,7 @@ import Form from 'components/Form';
 import ProgressBar from 'components/ProgressBar';
 
 const SecondStepForm = ({ onClickRadio, secondStepForm }) => (
-  <Form text="Wellcome to the Multi Step Form, lets start!">
+  <Form text="Wellcome to the Multi Step Form, lets start!" currentStep={1}>
     <Container alignItems="flex-start" justifyContent="center">
       <Item styles={{ textAlign: 'center', width: '100px' }}>
         <InputToggle name="b1" label="B1" onClick={onClickRadio} value="B1" isChecked={secondStepForm.b1} />

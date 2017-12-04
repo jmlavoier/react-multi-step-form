@@ -8,7 +8,7 @@ import Button from 'components/Button';
 import Form from 'components/Form';
 
 const ThirdStepForm = ({ onChangeInput, thirdStepForm, onClickCheck }) => (
-  <Form text={thirdStepForm.errorMessage}>
+  <Form text={thirdStepForm.errorMessage} currentStep={2}>
     <Container alignItems="flex-start" justifyContent="center">
       <Item styles={{ width: '200px' }}>
         <InputText name="email" label="E-mail" value={thirdStepForm.text} onChange={e => onChangeInput(e.target.value)} />
