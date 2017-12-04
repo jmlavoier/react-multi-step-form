@@ -1,4 +1,4 @@
-export const CHANGE_RADIO = 'CHANGE_CHECKBOX';
+export const CHANGE_RADIO = 'CHANGE_RADIO';
 export const SHOW_PROGRESSBAR = 'SHOW_PROGRESSBAR';
 export const HIDE_PROGRESSBAR = 'HIDE_PROGRESSBAR';
 export const NEXT_STEP = 'NEXT_STEP';
