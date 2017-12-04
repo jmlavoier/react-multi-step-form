@@ -16,10 +16,10 @@ const FORMS = [
 
 const ComposeAllForms = ({ firstStepForm, secondStepForm, thirdStepForm, fourthStepForm }) => {
   let step = 0;
-  step = firstStepForm.completed && 1;
-  step = secondStepForm.completed && 2;
-  step = thirdStepForm.completed && 3;
-  step = fourthStepForm.completed && 4;
+  step = firstStepForm.completed ? 1 : step;
+  step = secondStepForm.completed ? 2 : step;
+  step = thirdStepForm.completed ? 3 : step;
+  step = fourthStepForm.completed ? 4 : step;
 
   const CurrentForm = FORMS[step];
 
@@ -33,8 +33,8 @@ const ComposeAllForms = ({ firstStepForm, secondStepForm, thirdStepForm, fourthS
 ComposeAllForms.propTypes = {
   firstStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
   secondStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
-  thirdStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
-  fourthStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
+  thirdStepForm: PropTypes.shape({ text: PropTypes.string }).isRequired,
+  fourthStepForm: PropTypes.shape({ c: PropTypes.string }).isRequired,
 };
 
 export default ComposeAllForms;
