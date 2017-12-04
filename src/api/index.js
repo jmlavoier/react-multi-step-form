@@ -1,6 +1,5 @@
 export function checkIt(value) {
   return new Promise((resolve, reject) => {
-    console.log(value, value[0], value[0] === '@');
     setTimeout(() => {
       if (value && value[0] === '@') {
         resolve();
