@@ -4,7 +4,7 @@ import Container from 'components/Container';
 import Item from 'components/Item';
 import InputText from 'components/InputText';
 import Button from 'components/Button';
-import Form from 'forms/Form';
+import Form from 'components/Form';
 
 const ThirdStepForm = () => (
   <Form text="Wellcome to the Multi Step Form, lets start!">

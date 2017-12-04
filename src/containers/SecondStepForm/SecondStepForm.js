@@ -3,7 +3,7 @@ import React from 'react';
 import Container from 'components/Container';
 import Item from 'components/Item';
 import InputToggle from 'components/InputToggle';
-import Form from 'forms/Form';
+import Form from 'components/Form';
 
 const FirstStepForm = () => (
   <Form text="Wellcome to the Multi Step Form, lets start!">

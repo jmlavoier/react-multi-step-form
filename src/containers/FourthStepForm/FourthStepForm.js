@@ -3,7 +3,7 @@ import React from 'react';
 import Container from 'components/Container';
 import Item from 'components/Item';
 import SelectBox from 'components/SelectBox';
-import Form from 'forms/Form';
+import Form from 'components/Form';
 
 const FourthStepForm = () => (
   <Form text="Wellcome to the Multi Step Form, lets start!">
