@@ -15,7 +15,7 @@ const thirdStepFormReducer = (state = thirdStepFormInitialState, action) => {
     case THIRD_STEP_SHOW_ERROR:
       return {
         ...state,
-        [action.payload.name]: !state[action.payload.name],
+        errorMessage: action.message,
       };
     case THIRD_STEP_NEXT_STEP:
       return {

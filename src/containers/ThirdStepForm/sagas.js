@@ -2,22 +2,22 @@ import { takeLatest, call, put } from 'redux-saga/effects';
 import { checkIt } from 'api';
 
 import {
-  CHECK_TEXT,
-  SHOW_ERROR,
-  NEXT_STEP,
+  THIRD_STEP_CHECK_TEXT,
+  THIRD_STEP_SHOW_ERROR,
+  THIRD_STEP_NEXT_STEP,
 } from './constants';
 
 function* fetchCheckBox(action) {
   try {
     yield call(checkIt, action.payload.value);
-    yield put({ type: NEXT_STEP });
+    yield put({ type: THIRD_STEP_NEXT_STEP });
   } catch (e) {
-    yield put({ type: SHOW_ERROR, message: e.message });
+    yield put({ type: THIRD_STEP_SHOW_ERROR, message: e.message });
   }
 }
 
-function* thirdStepSaga() {
-  yield takeLatest(CHECK_TEXT, fetchCheckBox);
-}
+const thirdStepSaga = [
+  takeLatest(THIRD_STEP_CHECK_TEXT, fetchCheckBox),
+];
 
 export default thirdStepSaga;
