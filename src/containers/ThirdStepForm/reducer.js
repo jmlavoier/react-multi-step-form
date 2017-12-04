@@ -1,7 +1,7 @@
 import {
-  SHOW_ERROR,
-  NEXT_STEP,
-  CHANGE_INPUT,
+  THIRD_STEP_SHOW_ERROR,
+  THIRD_STEP_NEXT_STEP,
+  THIRD_STEP_CHANGE_INPUT,
 } from './constants';
 
 export const thirdStepFormInitialState = {
@@ -12,17 +12,17 @@ export const thirdStepFormInitialState = {
 
 const thirdStepFormReducer = (state = thirdStepFormInitialState, action) => {
   switch (action.type) {
-    case SHOW_ERROR:
+    case THIRD_STEP_SHOW_ERROR:
       return {
         ...state,
         [action.payload.name]: !state[action.payload.name],
       };
-    case NEXT_STEP:
+    case THIRD_STEP_NEXT_STEP:
       return {
         ...state,
         completed: true,
       };
-    case CHANGE_INPUT:
+    case THIRD_STEP_CHANGE_INPUT:
       return {
         ...state,
         text: action.payload.value,

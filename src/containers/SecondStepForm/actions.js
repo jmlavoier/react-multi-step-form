@@ -1,9 +1,9 @@
 import {
-  CHANGE_RADIO,
+  SECOND_STEP_CHANGE_RADIO,
 } from './constants';
 
-export const changeCheckBox = name => ({
-  type: CHANGE_RADIO,
+export const changeRadio = name => ({
+  type: SECOND_STEP_CHANGE_RADIO,
   payload: {
     name,
   },
