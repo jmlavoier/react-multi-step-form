@@ -15,7 +15,7 @@ const App = () => (
       </Item>
     </Container>
     <Container justifyContent="center" height="100%">
-      <ComposeAllForms step={1} />
+      <ComposeAllForms />
     </Container>
   </div>
 );

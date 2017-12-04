@@ -14,9 +14,14 @@ const FORMS = [
   FourthStepForm,
 ];
 
-const ComposeAllForms = ({ step }) => {
-  const index = step - 1;
-  const CurrentForm = FORMS[index];
+const ComposeAllForms = ({ firstStepForm, secondStepForm, thirdStepForm, fourthStepForm }) => {
+  let step = 0;
+  step = firstStepForm.completed && 1;
+  step = secondStepForm.completed && 2;
+  step = thirdStepForm.completed && 3;
+  step = fourthStepForm.completed && 4;
+
+  const CurrentForm = FORMS[step];
 
   return (
     <Item width="600px">
@@ -26,7 +31,10 @@ const ComposeAllForms = ({ step }) => {
 };
 
 ComposeAllForms.propTypes = {
-  step: PropTypes.number.isRequired,
+  firstStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
+  secondStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
+  thirdStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
+  fourthStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
 };
 
 export default ComposeAllForms;
