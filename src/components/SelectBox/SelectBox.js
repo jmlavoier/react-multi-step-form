@@ -11,12 +11,12 @@ const getClassName = isInvalid => classNames(style['select-wrapper'], {
   [style.invalid]: isInvalid,
 });
 
-const SelectBox = ({ id, name, label, options, value, onChange, isInvalid }) => (
+const SelectBox = ({ id, name, label, options, optionValue, onChange, isInvalid }) => (
   <div className={getClassName(isInvalid)}>
     <span className={style.label}>{label}</span>
-    <select id={id} className={style.select} name={name} onChange={onChange}>
+    <select id={id} name={name} className={style.select} value={optionValue} onChange={e => onChange(e.target.value)}>
       <option value="">Select</option>
-      {options.map(option => <option value={option} selected={option === value && 'selected'} >{option}</option>)}
+      {options.map(option => <option key={uid()} value={option} >{option}</option>)}
     </select>
   </div>
 );
@@ -26,7 +26,7 @@ SelectBox.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string),
-  value: PropTypes.string,
+  optionValue: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   isInvalid: PropTypes.bool,
 };
@@ -34,7 +34,7 @@ SelectBox.propTypes = {
 SelectBox.defaultProps = {
   id: selectId,
   options: [],
-  value: '',
+  optionValue: '',
   label: '',
   isInvalid: false,
 };

@@ -14,7 +14,7 @@ const getClassName = (isChecked, isInvalid) => classNames(style['input-wrapper']
 
 const InputToggle = ({ id, name, label, value, isChecked, onClick, isInvalid }) => (
   <div className={getClassName(isChecked, isInvalid)}>
-    <span role="presentation" className={style.input} onClick={onClick} />
+    <span role="presentation" className={style.input} onClick={() => onClick(name)} />
     <input
       id={id}
       name={name}

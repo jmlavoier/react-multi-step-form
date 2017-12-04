@@ -3,7 +3,7 @@ import React from 'react';
 import Container from 'components/Container';
 import Item from 'components/Item';
 
-import ComposeAllForms from 'forms/ComposeAllForms';
+import ComposeAllForms from 'containers/ComposeAllForms';
 
 import style from './App.sass';
 
@@ -15,7 +15,7 @@ const App = () => (
       </Item>
     </Container>
     <Container justifyContent="center" height="100%">
-      <ComposeAllForms step={1} />
+      <ComposeAllForms />
     </Container>
   </div>
 );

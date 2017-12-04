@@ -8,18 +8,18 @@ import Header from 'components/Header';
 import StepsWrapper from 'components/StepsWrapper';
 
 
-const HeaderForm = (
+const HeaderForm = currentStep => (
   <Header>
     <Container justifyContent="center">
       <Item>
-        <StepsWrapper steps={4} currentStep={0} />
+        <StepsWrapper steps={4} currentStep={currentStep} />
       </Item>
     </Container>
   </Header>
 );
 
-const Form = ({ text, children }) => (
-  <Box header={HeaderForm}>
+const Form = ({ text, children, currentStep }) => (
+  <Box header={HeaderForm(currentStep)}>
     {text &&
       <Container alignItems="flex-start" justifyContent="center">
         <Item flexGrow="1" styles={{ textAlign: 'center', paddingBottom: '20px' }}>
@@ -27,18 +27,22 @@ const Form = ({ text, children }) => (
         </Item>
       </Container>
     }
-    <div>{children}</div>
+    <div>
+      {children}
+    </div>
   </Box>
 );
 
 Form.propTypes = {
   text: PropTypes.string,
   children: PropTypes.node,
+  currentStep: PropTypes.number,
 };
 
 Form.defaultProps = {
   text: '',
-  children: PropTypes.node.isRequired,
+  children: '',
+  currentStep: 0,
 };
 
 export default Form;
