@@ -2,22 +2,22 @@ import { delay } from 'redux-saga';
 import { takeLatest, put } from 'redux-saga/effects';
 
 import {
-  CHANGE_SELECT,
-  SHOW_PROGRESSBAR,
-  HIDE_PROGRESSBAR,
-  NEXT_STEP,
+  FOURTH_STEP_CHANGE_SELECT,
+  FOURTH_STEP_SHOW_PROGRESSBAR,
+  FOURTH_STEP_HIDE_PROGRESSBAR,
+  FOURTH_STEP_NEXT_STEP,
 } from './constants';
 
 function* fetchCheckBox() {
-  yield put({ type: HIDE_PROGRESSBAR });
+  yield put({ type: FOURTH_STEP_HIDE_PROGRESSBAR });
   yield delay(1);
-  yield put({ type: SHOW_PROGRESSBAR });
+  yield put({ type: FOURTH_STEP_SHOW_PROGRESSBAR });
   yield delay(3000);
-  yield put({ type: NEXT_STEP });
+  yield put({ type: FOURTH_STEP_NEXT_STEP });
 }
 
 function* firstStepSaga() {
-  yield takeLatest(CHANGE_SELECT, fetchCheckBox);
+  yield takeLatest(FOURTH_STEP_CHANGE_SELECT, fetchCheckBox);
 }
 
 export default firstStepSaga;
