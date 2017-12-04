@@ -14,7 +14,6 @@ export const firstStepFormInitialState = {
 
 const verifyStateToGo = (state) => {
   if (state.a1 || state.a2) {
-    console.log('Vai!');
     return {
       ...state,
       completed: true,
@@ -22,7 +21,6 @@ const verifyStateToGo = (state) => {
     };
   }
   
-  console.log('Fica!');
   return {
     ...state,
     showProgressBar: false,
@@ -47,7 +45,6 @@ const firstStepFormReducer = (state = firstStepFormInitialState, action) => {
         showProgressBar: false,
       };
     case FIRST_STEP_NEXT_STEP:
-      console.log(FIRST_STEP_NEXT_STEP, state);
       return verifyStateToGo(state);
     default:
       return state;
