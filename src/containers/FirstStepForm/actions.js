@@ -1,11 +1,10 @@
 import {
-  CHANGE_CHECKBOX,
+  FIRST_STEP_CHANGE_CHECKBOX,
 } from './constants';
 
 export const changeCheckBox = name => ({
-  type: CHANGE_CHECKBOX,
+  type: FIRST_STEP_CHANGE_CHECKBOX,
   payload: {
     name,
   },
 });
-
