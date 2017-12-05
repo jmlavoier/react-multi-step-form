@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should component render text 1`] = `
+<Container
+  alignItems="flex-start"
+  height="auto"
+  justifyContent=""
+  styles={Object {}}
+  width="100%"
+>
+  <div
+    className="container"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "height": "auto",
+        "justifyContent": "",
+        "width": "100%",
+      }
+    }
+  >
+    text
+  </div>
+</Container>
+`;

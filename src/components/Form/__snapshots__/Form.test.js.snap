@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should component render text 1`] = `
+<Form
+  currentStep={0}
+  text="text"
+>
+  <Box
+    footer=""
+    header={
+      <Header
+        text=""
+        title=""
+      >
+        <Container
+          alignItems="flex-start"
+          height="auto"
+          justifyContent="center"
+          styles={Object {}}
+          width="100%"
+        >
+          <Item
+            flexGrow="0"
+            height=""
+            styles={Object {}}
+            width=""
+          >
+            <StepsWrapper
+              currentStep={0}
+              steps={5}
+            />
+          </Item>
+        </Container>
+      </Header>
+    }
+  >
+    <div
+      className="box"
+    >
+      <Header
+        text=""
+        title=""
+      >
+        <div
+          className="header"
+        >
+          <div>
+            <Container
+              alignItems="flex-start"
+              height="auto"
+              justifyContent="center"
+              styles={Object {}}
+              width="100%"
+            >
+              <div
+                className="container"
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "height": "auto",
+                    "justifyContent": "center",
+                    "width": "100%",
+                  }
+                }
+              >
+                <Item
+                  flexGrow="0"
+                  height=""
+                  styles={Object {}}
+                  width=""
+                >
+                  <div
+                    className="item"
+                    style={
+                      Object {
+                        "flexGrow": "0",
+                        "height": "",
+                        "width": "",
+                      }
+                    }
+                  >
+                    <StepsWrapper
+                      currentStep={0}
+                      steps={5}
+                    >
+                      <div
+                        className="steps-wrapper"
+                      >
+                        <Step
+                          isCompleted={false}
+                          pass={1}
+                        >
+                          <div
+                            className="step"
+                          >
+                            1
+                          </div>
+                        </Step>
+                        <span
+                          className="line-way"
+                        />
+                        <Step
+                          isCompleted={false}
+                          pass={2}
+                        >
+                          <div
+                            className="step"
+                          >
+                            2
+                          </div>
+                        </Step>
+                        <span
+                          className="line-way"
+                        />
+                        <Step
+                          isCompleted={false}
+                          pass={3}
+                        >
+                          <div
+                            className="step"
+                          >
+                            3
+                          </div>
+                        </Step>
+                        <span
+                          className="line-way"
+                        />
+                        <Step
+                          isCompleted={false}
+                          pass={4}
+                        >
+                          <div
+                            className="step"
+                          >
+                            4
+                          </div>
+                        </Step>
+                        <span
+                          className="line-way"
+                        />
+                        <Step
+                          isCompleted={false}
+                          pass={5}
+                        >
+                          <div
+                            className="step"
+                          >
+                            5
+                          </div>
+                        </Step>
+                      </div>
+                    </StepsWrapper>
+                  </div>
+                </Item>
+              </div>
+            </Container>
+          </div>
+        </div>
+      </Header>
+      <div
+        className="content"
+      >
+        <Container
+          alignItems="flex-start"
+          height="auto"
+          justifyContent="center"
+          styles={Object {}}
+          width="100%"
+        >
+          <div
+            className="container"
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "height": "auto",
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Item
+              flexGrow="1"
+              height=""
+              styles={
+                Object {
+                  "paddingBottom": "20px",
+                  "textAlign": "center",
+                }
+              }
+              width=""
+            >
+              <div
+                className="item"
+                style={
+                  Object {
+                    "flexGrow": "1",
+                    "height": "",
+                    "paddingBottom": "20px",
+                    "textAlign": "center",
+                    "width": "",
+                  }
+                }
+              >
+                <p>
+                  text
+                </p>
+              </div>
+            </Item>
+          </div>
+        </Container>
+        <div />
+      </div>
+    </div>
+  </Box>
+</Form>
+`;
