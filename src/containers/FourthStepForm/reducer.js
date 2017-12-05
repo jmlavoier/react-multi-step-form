@@ -5,7 +5,7 @@ import {
   FOURTH_STEP_NEXT_STEP,
 } from './constants';
 
-export const firstStepFormInitialState = {
+export const fourthStepFormInitialState = {
   c: '',
   showProgressBar: false,
   completed: false,
@@ -26,7 +26,7 @@ const verifyStateToGo = (state) => {
   };
 };
 
-const firstStepFormReducer = (state = firstStepFormInitialState, action) => {
+const fourthStepFormReducer = (state = fourthStepFormInitialState, action) => {
   switch (action.type) {
     case FOURTH_STEP_CHANGE_SELECT:
       return {
@@ -50,4 +50,4 @@ const firstStepFormReducer = (state = firstStepFormInitialState, action) => {
   }
 };
 
-export default firstStepFormReducer;
+export default fourthStepFormReducer;
