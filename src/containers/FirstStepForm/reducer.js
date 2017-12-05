@@ -20,7 +20,7 @@ const verifyStateToGo = (state) => {
       showProgressBar: false,
     };
   }
-  
+
   return {
     ...state,
     showProgressBar: false,

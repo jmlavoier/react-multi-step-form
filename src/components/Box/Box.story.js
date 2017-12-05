@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo, setDefaults } from '@storybook/addon-info';
 
-import Box from './Box';
 import Button from 'components/Button';
+import Box from './Box';
 
 // addon-info
 setDefaults({
