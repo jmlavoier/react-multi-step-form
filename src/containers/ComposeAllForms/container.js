@@ -7,11 +7,13 @@ const mapStateToProps = ({
   secondStepForm,
   thirdStepForm,
   fourthStepForm,
+  fivethStepForm,
 }) => ({
   firstStepForm,
   secondStepForm,
   thirdStepForm,
   fourthStepForm,
+  fivethStepForm,
 });
 
 export default connect(mapStateToProps)(ComposeAllForms);

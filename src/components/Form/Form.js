@@ -12,7 +12,7 @@ const HeaderForm = currentStep => (
   <Header>
     <Container justifyContent="center">
       <Item>
-        <StepsWrapper steps={4} currentStep={currentStep} />
+        <StepsWrapper steps={5} currentStep={currentStep} />
       </Item>
     </Container>
   </Header>
