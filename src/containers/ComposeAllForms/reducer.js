@@ -9,16 +9,10 @@ export const dataFormState = {
   c: '',
 };
 
-const updateForm = (state, { field, value }) => {
-  const formState = state.form;
-  return {
-    ...state,
-    form: {
-      ...formState,
-      [field]: value,
-    },
-  };
-};
+const updateForm = (state, form) => ({
+  ...state,
+  ...form,
+});
 
 const dataForm = (state = dataFormState, action) => {
   switch (action.type) {

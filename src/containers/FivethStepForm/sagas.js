@@ -2,6 +2,7 @@ import { delay } from 'redux-saga';
 import { takeLatest, put, call } from 'redux-saga/effects';
 import { submitIt } from 'api';
 
+import { COMPOSE_FORM_UPDATE } from 'containers/ComposeAllForms/constants';
 import {
   FIVETH_STEP_SUBMIT_FORM,
   FIVETH_STEP_SHOW_PROGRESSBAR,
@@ -10,17 +11,17 @@ import {
   FIVETH_STEP_SHOW_MESSAGE,
 } from './constants';
 
+
 function* fetchSubmitForm(action) {
   yield put({ type: FIVETH_STEP_SHOW_PROGRESSBAR });
   delay(1);
   try {
     yield call(submitIt, action.payload);
-    // here I put the action.paylod to form
-    console.log('success case');
+    yield put({ type: COMPOSE_FORM_UPDATE, payload: action.payload });
+    delay(200);
     yield put({ type: FIVETH_STEP_NEXT_STEP });
     yield put({ type: FIVETH_STEP_HIDE_PROGRESSBAR });
   } catch (e) {
-    console.log('error');
     yield put({ type: FIVETH_STEP_SHOW_MESSAGE, message: e.message });
     yield put({ type: FIVETH_STEP_HIDE_PROGRESSBAR });
   }

@@ -7,11 +7,11 @@ import Form from 'components/Form';
 import ProgressBar from 'components/ProgressBar';
 import Button from 'components/Button';
 
-const FivethStepForm = ({ onClickSubmit, fivethStepForm }) => (
+const FivethStepForm = ({ onClickSubmit, fivethStepForm, ...otherForms }) => (
   <Form text="Yes, your are almost there!" currentStep={4}>
     <Container alignItems="flex-start" justifyContent="center">
       <Item flexGrow="1" styles={{ textAlign: 'center' }} >
-        <Button text="Submit" onClick={onClickSubmit} />
+        <Button text="Submit" onClick={() => onClickSubmit(otherForms)} />
       </Item>
     </Container>
     <Container alignItems="flex-end" justifyContent="center">

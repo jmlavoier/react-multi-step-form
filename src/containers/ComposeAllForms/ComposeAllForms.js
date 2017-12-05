@@ -7,6 +7,8 @@ import SecondStepForm from 'containers/SecondStepForm';
 import ThirdStepForm from 'containers/ThirdStepForm';
 import FourthStepForm from 'containers/FourthStepForm';
 import FivethStepForm from 'containers/FivethStepForm';
+import LastStep from 'containers/LastStep';
+
 
 // I must clear this this, creating the step state to manage the stepForms
 const FORMS = [
@@ -15,7 +17,7 @@ const FORMS = [
   ThirdStepForm,
   FourthStepForm,
   FivethStepForm,
-  Item,
+  LastStep,
 ];
 
 const ComposeAllForms = ({ firstStepForm, secondStepForm, thirdStepForm, fourthStepForm, fivethStepForm }) => {
