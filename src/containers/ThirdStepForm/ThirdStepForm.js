@@ -6,6 +6,7 @@ import Item from 'components/Item';
 import InputText from 'components/InputText';
 import Button from 'components/Button';
 import Form from 'components/Form';
+import ProgressBar from 'components/ProgressBar';
 
 const ThirdStepForm = ({ onChangeInput, thirdStepForm, onClickCheck }) => (
   <Form text={thirdStepForm.errorMessage} currentStep={2}>
@@ -15,6 +16,11 @@ const ThirdStepForm = ({ onChangeInput, thirdStepForm, onClickCheck }) => (
       </Item>
       <Item styles={{ textAlign: 'center', padding: '18px 10px' }}>
         <Button text="Check Your Name" onClick={() => onClickCheck(thirdStepForm.text)} />
+      </Item>
+    </Container>
+    <Container alignItems="flex-end" justifyContent="center">
+      <Item flexGrow="1" styles={{ paddingTop: '40px', height: '20px' }}>
+        {thirdStepForm.showProgressBar && <ProgressBar duration="2s" />}
       </Item>
     </Container>
   </Form>
