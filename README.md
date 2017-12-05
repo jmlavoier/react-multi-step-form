@@ -2,7 +2,6 @@
 It's a simple step-by-step form using React/Redux.
 
 ## The project
-This project is using the `create-react-app` to start quickly. The root directory is inside of `my-app/src/`.
 
 ### The structure
 
@@ -11,7 +10,8 @@ This project is using the `create-react-app` to start quickly. The root director
     |- src/
         |- components
         |- containers
-        |- recucers
+        |- store
+        |- saga
         |- css
 ```
 
