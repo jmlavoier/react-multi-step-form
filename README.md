@@ -50,7 +50,6 @@ I think that one of the things most dificult to define is the style(colors and t
 - **Modules** - *Webpack, CSS Modules*;
 - **Unit tests**: *Jest, Enzyme*;
 - **Clean code** - *Lint*;
-- **Continuous Integration** - *Travis, Coveralls*;
 
 ## Getting started
 I encourage you to use the `yarn` to install the packages, you'll enjoy the yarn.lock to a faster installation, and the scripts will be fast too.
