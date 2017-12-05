@@ -6,6 +6,7 @@ import firstStepForm from 'containers/FirstStepForm/reducer';
 import secondStepForm from 'containers/SecondStepForm/reducer';
 import thirdStepForm from 'containers/ThirdStepForm/reducer';
 import fourthStepForm from 'containers/FourthStepForm/reducer';
+import fivethStepForm from 'containers/FivethStepForm/reducer';
 
 import rootSaga from 'sagas';
 
@@ -16,6 +17,7 @@ const rootReducers = combineReducers({
   secondStepForm,
   thirdStepForm,
   fourthStepForm,
+  fivethStepForm,
 });
 
 const store = createStore(
