@@ -9,7 +9,7 @@ import InputCheckBox from 'components/InputCheckBox';
 import ProgressBar from 'components/ProgressBar';
 
 const FirstStepForm = ({ onClickCheckBox, firstStepForm }) => (
-  <Form text="Wellcome to the Multi Step Form, lets start!" currentStep={0}>
+  <Form text="Wellcome to the Multi Step Form, lets start!">
     <Container alignItems="flex-start" justifyContent="center">
       <Item styles={{ textAlign: 'center', width: '100px' }}>
         <InputCheckBox name="a1" isChecked={firstStepForm.a1} label="A1" onClick={onClickCheckBox} />

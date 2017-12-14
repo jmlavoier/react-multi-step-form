@@ -1,8 +1,8 @@
 import { delay } from 'redux-saga';
-import { takeLatest, put, call } from 'redux-saga/effects';
+import { takeLatest, put, call, select } from 'redux-saga/effects';
 import { submitIt } from 'api';
 
-import { COMPOSE_FORM_UPDATE } from 'containers/ComposeAllForms/constants';
+import { COMPOSE_FORM_UPDATE, COMPOSE_NEXT_STEP } from 'containers/ComposeAllForms/constants';
 import {
   FIVETH_STEP_SUBMIT_FORM,
   FIVETH_STEP_SHOW_PROGRESSBAR,
@@ -21,6 +21,12 @@ function* fetchSubmitForm(action) {
     delay(200);
     yield put({ type: FIVETH_STEP_NEXT_STEP });
     yield put({ type: FIVETH_STEP_HIDE_PROGRESSBAR });
+
+    const completed = yield select(({ fourthStepForm }) => fourthStepForm.completed);
+
+    if (completed) {
+      yield put({ type: COMPOSE_NEXT_STEP });
+    }
   } catch (e) {
     yield put({ type: FIVETH_STEP_SHOW_MESSAGE, message: e.message });
     yield put({ type: FIVETH_STEP_HIDE_PROGRESSBAR });

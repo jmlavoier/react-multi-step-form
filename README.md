@@ -1,22 +1,20 @@
 # Multi Step Form
-It's a simple step-by-step form using React/Redux.
+It's a simple step-by-step form using React/Redux. Created to solve this [challenge](https://gist.github.com/rewop/d3aa46cb3874c2a47e51c0a33f1f60f6#file-api-js).
 
 ## The project
-This project is using the `create-react-app` to start quickly. The root directory is inside of `my-app/src/`.
 
 ### The structure
 
  ```
-|- my-app 
-    |- src/
-        |- components
-        |- containers
-        |- recucers
-        |- css
+|- src/
+    |- components
+    |- containers
+    |- store
+    |- saga
+    |- css
 ```
 
 ### Presentational components
-
 First of all I created the `components` module containing all presentational components. Only these components can be styled. These components are leaned on their `css` and `test` files.
   
 ```
@@ -29,12 +27,28 @@ First of all I created the `components` module containing all presentational com
 ```
 
 ### Containers components
-The `containers` folder has to organize only the containers components to map the redux states and dispatch to props.
+The `containers` folder has to organize only the containers components to map the redux states and dispatch to props. Here you should create the *actions, reducers, constants, sagas*. And the most important, the **component** that will receive the props. 
 
-### Reducers
-The `reducers` folder was created to combine the "thousands and thousands" reducers of the applications. 
+```
+|- containers
+    |- FirstStepForm
+        |- FirstStepForm.js
+        |- actions.js
+        |- constants.js
+        |- container.js
+        |- index.js
+        |- reducer.js
+        |- sagas.js
+```
 
-And finally `css` is where the general styles are introduced.
+### Store
+The `store` folder was created to combine the "thousands and thousands" reducers of the applications and apply any middleware.
+
+### Saga
+The `saga` folder was created to combine all sagas of the application. 
+
+### Css
+And finally `css` is where the general styles are introduced to reset the application, and some root configurations for `sass` like *_variables* and *_mixins*.
 
 ## Layout 
 I think that one of the things most dificult to define is the style(colors and the ux desing), so I've considered figure it out searching some designs to get inspired.
@@ -92,6 +106,11 @@ I encourage you to use the `yarn` to install the packages, you'll enjoy the yarn
 ### Troubleshoot Lint issues
 ```
   yarn lint:fix
+```
+
+###  Storybook
+```
+  yarn storybook
 ```
 
 ###  Production build

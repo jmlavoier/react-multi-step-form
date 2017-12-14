@@ -9,7 +9,7 @@ import Form from 'components/Form';
 import ProgressBar from 'components/ProgressBar';
 
 const ThirdStepForm = ({ onChangeInput, thirdStepForm, onClickCheck }) => (
-  <Form text={thirdStepForm.errorMessage} currentStep={2}>
+  <Form text={thirdStepForm.errorMessage}>
     <Container alignItems="flex-start" justifyContent="center">
       <Item styles={{ width: '200px' }}>
         <InputText name="email" label="Name" value={thirdStepForm.text} onChange={e => onChangeInput(e.target.value)} />
