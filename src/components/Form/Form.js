@@ -3,23 +3,9 @@ import PropTypes from 'prop-types';
 
 import Container from 'components/Container';
 import Item from 'components/Item';
-import Box from 'components/Box';
-import Header from 'components/Header';
-import StepsWrapper from 'components/StepsWrapper';
 
-
-const HeaderForm = currentStep => (
-  <Header>
-    <Container justifyContent="center">
-      <Item>
-        <StepsWrapper steps={5} currentStep={currentStep} />
-      </Item>
-    </Container>
-  </Header>
-);
-
-const Form = ({ text, children, currentStep }) => (
-  <Box header={HeaderForm(currentStep)}>
+const Form = ({ text, children }) => (
+  <div>
     {text &&
       <Container alignItems="flex-start" justifyContent="center">
         <Item flexGrow="1" styles={{ textAlign: 'center', paddingBottom: '20px' }}>
@@ -30,19 +16,19 @@ const Form = ({ text, children, currentStep }) => (
     <div>
       {children}
     </div>
-  </Box>
+  </div>
 );
 
 Form.propTypes = {
   text: PropTypes.string,
   children: PropTypes.node,
-  currentStep: PropTypes.number,
 };
 
 Form.defaultProps = {
   text: '',
   children: '',
   currentStep: 0,
+  header: '',
 };
 
 export default Form;

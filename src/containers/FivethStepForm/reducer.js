@@ -2,6 +2,7 @@ import {
   FIVETH_STEP_SHOW_PROGRESSBAR,
   FIVETH_STEP_HIDE_PROGRESSBAR,
   FIVETH_STEP_NEXT_STEP,
+  FIVETH_STEP_SHOW_MESSAGE,
 } from './constants';
 
 export const fivethStepFormInitialState = {
@@ -26,6 +27,11 @@ const fivethStepFormReducer = (state = fivethStepFormInitialState, action) => {
         ...state,
         completed: true,
         showProgressBar: false,
+      };
+    case FIVETH_STEP_SHOW_MESSAGE:
+      return {
+        ...state,
+        message: action.message,
       };
     default:
       return state;

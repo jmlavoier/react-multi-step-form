@@ -8,7 +8,7 @@ import ProgressBar from 'components/ProgressBar';
 import Button from 'components/Button';
 
 const FivethStepForm = ({ onClickSubmit, fivethStepForm, ...otherForms }) => (
-  <Form text="Yes, your are almost there!" currentStep={4}>
+  <Form text={fivethStepForm.message}>
     <Container alignItems="flex-start" justifyContent="center">
       <Item flexGrow="1" styles={{ textAlign: 'center' }} >
         <Button text="Submit" onClick={() => onClickSubmit(otherForms)} />
