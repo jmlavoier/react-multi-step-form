@@ -8,41 +8,40 @@ import ThirdStepForm from 'containers/ThirdStepForm';
 import FourthStepForm from 'containers/FourthStepForm';
 import FivethStepForm from 'containers/FivethStepForm';
 import LastStep from 'containers/LastStep';
+import Header from 'components/Header';
+import StepsWrapper from 'components/StepsWrapper';
+import Container from 'components/Container';
+import Box from 'components/Box';
 
-
-// I must clear this this, creating the step state to manage the stepForms
-const FORMS = [
-  FirstStepForm,
-  SecondStepForm,
-  ThirdStepForm,
-  FourthStepForm,
-  FivethStepForm,
-  LastStep,
-];
-
-const ComposeAllForms = ({ firstStepForm, secondStepForm, thirdStepForm, fourthStepForm, fivethStepForm }) => {
-  let step = 0;
-  step = firstStepForm.completed ? 1 : step;
-  step = secondStepForm.completed ? 2 : step;
-  step = thirdStepForm.completed ? 3 : step;
-  step = fourthStepForm.completed ? 4 : step;
-  step = fivethStepForm.completed ? 5 : step;
-
-  const CurrentForm = FORMS[step];
+const ComposeAllForms = ({ dataForm }) => {
+  const { currentStep } = dataForm;
 
   return (
     <Item width="600px">
-      <CurrentForm />
+      <Box>
+        <Header>
+          <Container justifyContent="center">
+            <Item>
+              <StepsWrapper steps={5} currentStep={currentStep} />
+            </Item>
+          </Container>
+        </Header>
+        {currentStep === 1 && <FirstStepForm />}
+        {currentStep === 2 && <SecondStepForm />}
+        {currentStep === 3 && <ThirdStepForm />}
+        {currentStep === 4 && <FourthStepForm />}
+        {currentStep === 5 && <FivethStepForm />}
+        {currentStep === 6 && <LastStep />}
+      </Box>
     </Item>
   );
 };
 
 ComposeAllForms.propTypes = {
-  firstStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
-  secondStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
-  thirdStepForm: PropTypes.shape({ text: PropTypes.string }).isRequired,
-  fourthStepForm: PropTypes.shape({ c: PropTypes.string }).isRequired,
-  fivethStepForm: PropTypes.objectOf(PropTypes.bool).isRequired,
+  dataForm: PropTypes.shape({
+    form: PropTypes.object,
+    currentStep: PropTypes.number,
+  }).isRequired,
 };
 
 export default ComposeAllForms;

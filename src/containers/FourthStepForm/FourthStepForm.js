@@ -8,7 +8,7 @@ import Form from 'components/Form';
 import ProgressBar from 'components/ProgressBar';
 
 const FourthStepForm = ({ onChangeSelect, fourthStepForm }) => (
-  <Form text="Wellcome to the Multi Step Form, lets start!" currentStep={3}>
+  <Form>
     <Container alignItems="flex-start" justifyContent="center">
       <Item styles={{ width: '300px' }} >
         <SelectBox name="c" label="Last choice" optionValue={fourthStepForm.c} onChange={onChangeSelect} options={['C1', 'C2', 'C3']} />
