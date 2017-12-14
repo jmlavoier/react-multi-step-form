@@ -1,5 +1,5 @@
 # Multi Step Form
-It's a simple step-by-step form using React/Redux.
+It's a simple step-by-step form using React/Redux. Created to solve this [challenge](https://gist.github.com/rewop/d3aa46cb3874c2a47e51c0a33f1f60f6#file-api-js).
 
 ## The project
 
